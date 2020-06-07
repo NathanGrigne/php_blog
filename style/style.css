@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #3c3c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+header a:hover{
+    color:#f26844;
+}
+
+h2{
+    margin: 10px 0;
+}
+
+p{
+    line-height: 23px;
+}
+
+.home-title{
+    margin: 2vh 0 0 5vw;
+    color: #f26844;
+}
+
+.tv-show-list{
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo-tv-show{
+    width: 350px;
+    height: auto;
+    margin: 10px;
+}
+
+.header-tv-show{
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: auto;
+    margin: 2vh 0 0 10vw;
+}
+
+.tv-show-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tv-show-title{
+    margin: 0 10px;
+}
+
+.tv-show-content{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0 0 10vw;
+}
+
+.tv-show-text{
+    width: 40vw;
+}
+
+.image-tv-show{
+    width: 30vw;
+    height: auto;
+    margin: 40px 0;
+}
+
+.tv-show-critic-container{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0 0 10vw;
+}
+
+.tv-show-critic{
+    width: 40vw;
+    margin: 10px 0;
+}
+
+h2{
+    color: #f26844;
+}
+
+.access{
+    display: flex;
+    align-items: center;
+}
+
+.access a{
+    font-size: 16px;
+    margin: 5px;
+}
+
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 0 10vh 10vw;
+}

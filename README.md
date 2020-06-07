@@ -1,26 +1,16 @@
-# Name
->Description
+# 🚲 Le Blog Du Cycliste
 
-## Features
+## 🎯 Features
+Click on the article you would like to read for :
+- Read it
+- Add comments
+- Remove comments
 
-Lister les features
-
-## Installation
-
-Comment l'installer ?
-
-## Usage example
-
-Exemple d'usage
-
-## Meta
-
-Nathan Grigné – [@Nathan_Grigne](https://twitter.com/Nathan_Grigne) - grigne.nathan@gmail.com
-
-## Contributing
-
-1. Fork it (<lien_du_fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+## 🔧 Instructions
+- Install PHP and Mamp on your desktop
+- Open the project -> go in ```includes``` folder -> ```config.php``` -> and enter your correct information to access the database
+- Open Mamp -> go in ```Preferences``` -> ```Web Server```-> ```Select``` the project
+- Now click on ```Start Server```
+- When Mamp page is open, click on ```Tools``` -> ```phpMyAdmin``` -> ```Import``` -> select ```export.sql``` file, which is in the project folder
+- In Mamp page, click on ```My Website``` to open the blog
+- Don't forget to click on ```Stop Server``` when leaving
