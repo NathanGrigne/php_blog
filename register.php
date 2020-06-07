@@ -28,13 +28,13 @@ if(!empty($_POST))
         $messages['usrnm-error'][] = 'Your username is missing';
     }
 
-    elseif (strlen($password) < 5)
+    if (strlen($password) < 5)
     {
         $messages['pwd-error'][] = 'Your password is too short';
     }
 
-    // Check if username already exists
-    $temp = 'SELECT email FROM users WHERE email ="'.$login.'"';
+    // Check if email already exists
+    $temp = 'SELECT email, username FROM users WHERE email ="'.$login.'"';
 
     $user = $pdo->query($temp)->fetch();
     if ($user->login === $login)

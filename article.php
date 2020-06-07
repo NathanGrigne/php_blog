@@ -109,7 +109,7 @@
         <?php foreach($comments as $_comment): ?>
             <li>
                 <!-- Comment -->
-                <?= $_comment->text ?>
+                <?= nl2br($_comment->text) ?>
                 <!-- Delete comment -->
                 <br>
                 Écrit par : <?= $_comment->username ?>
@@ -122,7 +122,7 @@
     <form action="#" method="post">
         <label for="comment">Votre commentaire</label>
         <br>
-        <input id="comment" type="text" placeholder="Votre commentaire" name="comment" value="<?= $comment ?>">
+        <textarea id="comment" type="text" placeholder="Votre commentaire" name="comment" value="<?= $comment ?>"></textarea>
         <br>
         <input type="submit">
     </form>
