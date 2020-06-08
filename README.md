@@ -2,9 +2,11 @@
 
 ## 🎯 Features
 Click on the article you would like to read for :
+- Create your account
 - Read it
 - Add comments
 - Remove comments
+- Add TV Show
 
 ## 🔧 Instructions
 - Install PHP and Mamp on your desktop
