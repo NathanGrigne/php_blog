@@ -56,6 +56,13 @@ p{
     flex-wrap: wrap;
 }
 
+.article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
 .logo-tv-show{
     width: 350px;
     height: auto;
@@ -291,4 +298,14 @@ ul{
     background: #f26844;
     color: #FFFFFF;
     margin-left: calc(50% - 50px);
+}
+
+.comments{
+    border: 1px solid #f26844;
+    width: 40vw;
+    height: 50px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
