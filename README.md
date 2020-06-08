@@ -18,5 +18,5 @@ Click on the article you would like to read for :
 - Don't forget to click on ```Stop Server``` when leaving
 
 ## ✍️ Inspiration
-- All reviews are taken from the site: www.senscritique.com/
-- Most of the information is taken from: en.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal
+- All reviews are taken from the site: www.senscritique.com
+- Most of the information is taken from: www.wikipedia.org
