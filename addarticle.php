@@ -6,7 +6,7 @@
 
     $title = '';
     $text = '';
-    $date = date('Y-m-d');
+    $date = '';
     $image = '';
     $synopsis = '';
     $note = '';
@@ -24,6 +24,7 @@
         $synopsis = trim(strip_tags($_POST['synopsis']));
         $note = trim(strip_tags($_POST['note']));
         $image_tv_show = trim(strip_tags($_POST['image_tv_show']));
+        $date = ($_POST['date']);
 
         //Error
         if(empty($title)){
@@ -66,7 +67,7 @@
             }
 
             // Message
-            $successMessages[] = 'Votre commentaire a été envoyé';
+            $successMessages[] = 'Votre article a été envoyé';
 
             header("location:/");
 
