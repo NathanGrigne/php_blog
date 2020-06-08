@@ -1,4 +1,4 @@
-# 🚲 Le Blog Du Cycliste
+# 📽 Le blog des séries
 
 ## 🎯 Features
 Click on the article you would like to read for :
