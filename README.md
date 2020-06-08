@@ -1,12 +1,14 @@
 # 📽 Le blog des séries
 
 ## 🎯 Features
+You can :
+- Create your session
+- Add TV Show
+
 Click on the article you would like to read for :
-- Create your account
 - Read it
 - Add comments
 - Remove your comments
-- Add TV Show
 
 ## 🔧 Instructions
 - Install PHP and Mamp on your desktop
