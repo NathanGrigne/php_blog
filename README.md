@@ -20,3 +20,9 @@ Click on the article you would like to read for :
 ## ✍️ Inspiration
 - All reviews are taken from the site: www.senscritique.com
 - Most of the information is taken from: www.wikipedia.org
+
+## 🧠 Tips
+- Admin user : 
+    - mail : admin@admin.com
+    - password : Admin54@
+    - username :admin
