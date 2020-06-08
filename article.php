@@ -6,7 +6,9 @@
     $id_tv_shows = (int)$_GET['id_tv_show'];
 
     //Set Username
-    $username = $_SESSION['username'];
+    if($_SESSION){
+        $username = $_SESSION['username'];
+    }
 
     // Select article
     $query = $pdo->query('SELECT id, title, text, date, image, synopsis, note, image_tv_show FROM articles WHERE id = '.$id_tv_shows);
@@ -36,13 +38,13 @@
         if(empty($errorMessages)){
             // Save in database
             $data = [
-            'id_comment'=> $id_tv_shows,
-            'username'=> $username,
-            'text'=> $comment
-        ];
-        $prepare = $pdo->prepare('INSERT INTO comments (id_comment, username, text) VALUES (:id_comment, :username, :text)');
+                'id_comment'=> $id_tv_shows,
+                'username'=> $username,
+                'text'=> $comment
+            ];
+            $prepare = $pdo->prepare('INSERT INTO comments (id_comment, username, text) VALUES (:id_comment, :username, :text)');
 
-        $prepare->execute($data);
+            $prepare->execute($data);
 
             if(!$prepare){
                 $successMessages[] = 'Un problème est survenu, veillez contacter un administrateur';
@@ -105,35 +107,41 @@
     <h2>Commentaires :</h2>
 
     <!-- Comments -->
-    <ul class="article-comments">
+    <ul class="tv-show-comments">
         <?php foreach($comments as $_comment): ?>
-            <li>
+            <li class="list-comment">
                 <!-- Comment -->
                 <?= nl2br($_comment->text) ?>
                 <!-- Delete comment -->
                 <br>
                 Écrit par : <?= $_comment->username ?>
+                <?php if(($_SESSION && $username === $_comment->username) || ( $_SESSION && $username === 'admin')){ ?>
                 <a class="delete-comment" href="includes/delete.php?id_tv_show=<?= $article[0]->id ?>&id_comment=<?= $_comment->id ?>">Supprimer</a>
+                <?php } ?>
             </li>
         <?php endforeach ?>
     </ul>
 
-    <!-- Add comment -->
-    <form action="#" method="post">
-        <label for="comment">Votre commentaire</label>
-        <br>
-        <textarea id="comment" type="text" placeholder="Votre commentaire" name="comment" value="<?= $comment ?>"></textarea>
-        <br>
-        <input type="submit">
-    </form>
-    <!-- Messages -->
-    <?php foreach($errorMessages as $_message):?>
-    <div class="message-error"><?= $_message ?></div>
-    <?php endforeach ?>
-    <?php foreach($successMessages as $_message):?>
-    <div class="message-success"><?= $_message ?></div>
-    <?php endforeach ?>
-
+    <?php 
+        if($_SESSION){ ?>
+            <!-- Add comment -->
+            <form class="form-add-comment" action="#" method="post">
+                <label for="comment">Votre commentaire</label>
+                <br>
+                <textarea class="comment" id="comment" placeholder="Votre commentaire" name="comment" value="<?= $comment ?>"></textarea>
+                <br>
+                <input class="add-comment" type="submit">
+            </form>
+            <!-- Messages -->
+            <?php foreach($errorMessages as $_message):?>
+            <div class="message-error"><?= $_message ?></div>
+            <?php endforeach ?>
+            <?php foreach($successMessages as $_message):?>
+            <div class="message-success"><?= $_message ?></div>
+            <?php endforeach ?>
+        <?php
+        }
+    ?>
 </div>
 
 

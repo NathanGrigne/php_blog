@@ -1,6 +1,6 @@
 <?php
     // Include
-    include './config.php';
+    include '/config.php';
 
     // Retrieve id and delete comment
     $id_tv_shows = (int)$_GET['id_tv_show'];
