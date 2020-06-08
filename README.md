@@ -5,7 +5,7 @@ Click on the article you would like to read for :
 - Create your account
 - Read it
 - Add comments
-- Remove comments
+- Remove your comments
 - Add TV Show
 
 ## 🔧 Instructions
@@ -16,3 +16,7 @@ Click on the article you would like to read for :
 - When Mamp page is open, click on ```Tools``` -> ```phpMyAdmin``` -> ```Import``` -> select ```export.sql``` file, which is in the project folder
 - In Mamp page, click on ```My Website``` to open the blog
 - Don't forget to click on ```Stop Server``` when leaving
+
+## ✍️ Inspiration
+- All reviews are taken from the site: www.senscritique.com/
+- Most of the information is taken from: en.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal
