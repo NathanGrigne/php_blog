@@ -46,6 +46,15 @@
             $errorMessages[] = `Veuillez entrer le lien de l'image d'illustration`;
         }
 
+        // Check if the TV Show already exists
+        $temp = 'SELECT title FROM articles WHERE title ="'.$title.'"';
+        $article = $pdo->query($temp)->fetch();
+
+        if ($article->title === $title)
+        {
+            $errorMessages[] = 'This article already exists';
+        }
+
         // Success
         if (empty($errorMessages))
         {
@@ -84,7 +93,11 @@
 
     include 'includes/header.php';
 ?>
-
+<?php foreach($errorMessages as $_errorMessages): ?>
+    <div class="message error">
+        <?= $_errorMessages; ?>
+    </div>
+<?php endforeach ?>
 <form class="add-tv-show-form" action="#" method="post">
     <label for="title">Titre de la série</label>
     <br>
@@ -123,3 +136,8 @@
     <br>
     <input class="submit-button-article" type="submit">
 </form>
+<?php foreach($successMessages as $_successMessages): ?>
+    <div class="message success">
+        <?= $_successMessages; ?>
+    </div>
+<?php endforeach ?>
